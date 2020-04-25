@@ -78,10 +78,6 @@ export class AppComponent implements OnInit {
     this.loadInput();
   }
 
-  back() {
-    history.back();
-  }
-
   clear() {
     this.result = [];
     this.mMax = 0;

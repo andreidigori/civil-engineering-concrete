@@ -1,8 +1,5 @@
 <mat-toolbar class="mat-elevation-z4" color="primary">
-  <button mat-icon-button (click)="back()">
-    <mat-icon>arrow_back</mat-icon>
-  </button>
-  <span fxFlex="grow" style="margin-left: 16px;">
+  <span fxFlex>
     Beton armat II
   </span>
   <button *ngIf="result.length > 0" mat-icon-button (click)="clear()" mat-icon-button>
