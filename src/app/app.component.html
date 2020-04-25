@@ -11,7 +11,7 @@
 </mat-toolbar>
 <form [formGroup]="inputForm" (ngSubmit)="calculate()">
   <mat-card>
-    <h2 class="mat-title">
+    <h2 class="mat-h2">
       Stâlpi și dimensiuni:
     </h2>
     <div fxLayout="row wrap">
@@ -32,11 +32,11 @@
     <ng-template [ngIf]="inputForm.get('hsh').value" [ngIfElse]="noHsh">
       <div fxLayout="row wrap">
         <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-          <mat-label>Înălțimea porțiunii inferioare a stâlpilor halei HI</mat-label>
+          <mat-label>HI - Înălțimea porțiunii inferioare a stâlpilor halei</mat-label>
           <input matInput formControlName="h2" type="number" min="0" step="any" />
         </mat-form-field>
         <mat-form-field appearance="outline" color="accent" fxFlex>
-          <mat-label>Nr. de zăbrele (goluri) ale stâlpilor halei Z</mat-label>
+          <mat-label>Z - Nr. de zăbrele (goluri) ale stâlpilor halei</mat-label>
           <input matInput formControlName="z" type="number" min="1" step="1" />
         </mat-form-field>
       </div>
@@ -44,68 +44,68 @@
     <ng-template #noHsh>
       <div fxLayout="row wrap">
         <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-          <mat-label>Înălțimea portiunii inferioare a stâlpului marginal HIM</mat-label>
+          <mat-label>HIM - Înălțimea porțiunii inferioare a stâlpului marginal</mat-label>
           <input matInput formControlName="h2" type="number" min="0" step="any" />
         </mat-form-field>
         <mat-form-field appearance="outline" color="accent" fxFlex>
-          <mat-label>Nr. de zăbrele (goluri) ale stâlpului marginal ZM</mat-label>
+          <mat-label>ZM - Nr. de zăbrele (goluri) ale stâlpului marginal</mat-label>
           <input matInput formControlName="z" type="number" min="1" step="1" />
         </mat-form-field>
       </div>
       <div fxLayout="row wrap">
         <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-          <mat-label>Înălțimea portiunii inferioare a stâlpului central HIC</mat-label>
+          <mat-label>HIC - Înălțimea porțiunii inferioare a stâlpului central</mat-label>
           <input matInput formControlName="hic" type="number" min="0" step="any" />
         </mat-form-field>
         <mat-form-field appearance="outline" color="accent" fxFlex>
-          <mat-label>Nr. de zăbrele (goluri) ale stâlpului central ZC</mat-label>
+          <mat-label>ZC - Nr. de zăbrele (goluri) ale stâlpului central</mat-label>
           <input matInput formControlName="zc" type="number" min="1" step="1" />
         </mat-form-field>
       </div>
     </ng-template>
   </mat-card>
   <mat-card>
-    <h2 class="mat-title">
+    <h2 class="mat-h2">
       Rigiditățile secțiunilor:
     </h2>
     <div fxLayout="row wrap">
       <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-        <mat-label>Rigiditatea sect. port. superioare a stâlpului marg. RSSM</mat-label>
+        <mat-label>RSSM - Rigiditatea secțiunii porțiunii superioare a stâlpului marginal</mat-label>
         <input matInput formControlName="i1" type="number" min="0" step="any" />
       </mat-form-field>
       <mat-form-field appearance="outline" color="accent" fxFlex>
-        <mat-label>Rigiditatea sect. port. inferioare a stâlpului marg. RSIM</mat-label>
+        <mat-label>RSIM - Rigiditatea secțiunii porțiunii inferioare a stâlpului marginal</mat-label>
         <input matInput formControlName="i2" type="number" min="0" step="any" />
       </mat-form-field>
     </div>
     <div fxLayout="row wrap">
       <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-        <mat-label>Rigiditatea sectiunii ramurii stâlpului marginal RRSM</mat-label>
+        <mat-label>RRSM - Rigiditatea sectiunii ramurii stâlpului marginal</mat-label>
         <input matInput formControlName="i7" type="number" min="0" step="any" />
       </mat-form-field>
       <mat-form-field appearance="outline" color="accent" fxFlex>
-        <mat-label>Rigiditatea sect. port. super. a stâlpului central RSSC</mat-label>
+        <mat-label>RSSC - Rigiditatea secțiunii porțiunii superioare a stâlpului central</mat-label>
         <input matInput formControlName="i3" type="number" min="0" step="any" />
       </mat-form-field>
     </div>
     <div fxLayout="row wrap">
       <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-        <mat-label>Rigiditatea sect. port. infer. a stâlpului central RSIC</mat-label>
+        <mat-label>RSIC - Rigiditatea secțiunii porțiunii inferioare a stâlpului central</mat-label>
         <input matInput formControlName="i4" type="number" min="0" step="any" />
       </mat-form-field>
       <mat-form-field appearance="outline" color="accent" fxFlex>
-        <mat-label>Rigiditatea sectiunii ramurii stâlpului central RRSC</mat-label>
+        <mat-label>RRSC - Rigiditatea sectiunii ramurii stâlpului central</mat-label>
         <input matInput formControlName="i8" type="number" min="0" step="any" />
       </mat-form-field>
     </div>
   </mat-card>
   <mat-card>
-    <h2 class="mat-title">
+    <h2 class="mat-h2">
       Tipul stâlpului:
     </h2>
     <div fxLayout="column">
       <mat-form-field appearance="outline" color="accent">
-        <mat-label>Indicele stâlpului C</mat-label>
+        <mat-label>C - Indicele stâlpului</mat-label>
         <mat-select formControlName="c">
           <mat-option value="1">Marginal</mat-option>
           <mat-option value="2">Central</mat-option>
@@ -116,7 +116,7 @@
       <div *ngSwitchCase="'2'" fxLayout="column">
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Sarcina de la acoperiș: desch. stânga G1</mat-label>
+            <mat-label>G1 - Sarcina de la acoperiș din deschiderea stângă</mat-label>
             <input matInput formControlName="g1" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex>
@@ -126,7 +126,7 @@
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Sarcina de la zapada: desch. stânga S1</mat-label>
+            <mat-label>S1 - Sarcina de la zapada din deschiderea stângă</mat-label>
             <input matInput formControlName="s1" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex>
@@ -136,27 +136,27 @@
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Greutatea grinzii de rulare a podului rulant G3</mat-label>
+            <mat-label>G3 - Greutatea grinzii de rulare a podului rulant</mat-label>
             <input matInput formControlName="g3" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex>
-            <mat-label>Greutatea portiunii superioare a stâlpului central G5</mat-label>
+            <mat-label>G5 - Greutatea porțiunii superioare a stâlpului central</mat-label>
             <input matInput formControlName="g5" type="number" min="0" step="any" />
           </mat-form-field>
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Greutatea portiunii inferioare a stâlpului central G7</mat-label>
+            <mat-label>G7 - Greutatea porțiunii inferioare a stâlpului central</mat-label>
             <input matInput formControlName="g7" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex>
-            <mat-label>Excentric. grinzilor acoperișului: sting, drept E3</mat-label>
+            <mat-label>E3 - Excentricitatea grinzilor acoperișului stâng-drept</mat-label>
             <input matInput formControlName="e3" type="number" min="0" step="any" />
           </mat-form-field>
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Sarcina de la vânt: acoperiș W</mat-label>
+            <mat-label>W - Sarcina de la vânt de la acoperiș</mat-label>
             <input matInput formControlName="w" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
@@ -170,7 +170,7 @@
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Sarcina podului rulant sting: NS-min</mat-label>
+            <mat-label>NS-min - Sarcina podului rulant stâng</mat-label>
             <input matInput formControlName="n6" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
@@ -184,7 +184,7 @@
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Sarcina podului rulant drept: ND-min</mat-label>
+            <mat-label>ND-min - Sarcina podului rulant drept</mat-label>
             <input matInput formControlName="n8" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
@@ -198,7 +198,7 @@
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Excentricitatile sarcin. podului rulant sting E5</mat-label>
+            <mat-label>E5 - Excentricitatea sarcinilor podului rulant stâng</mat-label>
             <input matInput formControlName="e5" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex>
@@ -208,7 +208,7 @@
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Excentricitatile sarcin. podului rulant drept E8</mat-label>
+            <mat-label>E8 - Excentricitatea sarcinilor podului rulant drept</mat-label>
             <input matInput formControlName="e8" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex>
@@ -217,42 +217,42 @@
           </mat-form-field>
         </div>
         <mat-form-field appearance="outline" color="accent">
-          <mat-label>Coeficientul de conlucrare spatiala a cadrelor K</mat-label>
+          <mat-label>K - Coeficientul de conlucrare spatiala a cadrelor</mat-label>
           <input matInput formControlName="k" type="number" min="0" step="any" />
         </mat-form-field>
       </div>
       <div *ngSwitchCase="'1'" fxLayout="column">
         <mat-form-field appearance="outline" color="accent">
-          <mat-label>Sarcina de la greutatea proprie a acoperișului sting G1</mat-label>
+          <mat-label>G1 - Sarcina de la greutatea proprie a acoperișului stâng</mat-label>
           <input matInput formControlName="g1" type="number" min="0" step="any" />
         </mat-form-field>
         <mat-form-field appearance="outline" color="accent">
-          <mat-label>Sarcina de la zapada de pe deschiderea stânga SI</mat-label>
+          <mat-label>SI - Sarcina de la zapada de pe deschiderea stânga</mat-label>
           <input matInput formControlName="s1" type="number" min="0" step="any" />
         </mat-form-field>
         <mat-form-field appearance="outline" color="accent">
-          <mat-label>Greutatea portiunei superioare a peretelui suspendat G2</mat-label>
+          <mat-label>G2 - Greutatea porțiunei superioare a peretelui suspendat</mat-label>
           <input matInput formControlName="g2" type="number" min="0" step="any" />
         </mat-form-field>
         <mat-form-field appearance="outline" color="accent">
-          <mat-label>Greutatea grinzii de rulare a podului rulant G3</mat-label>
+          <mat-label>G3 - Greutatea grinzii de rulare a podului rulant</mat-label>
           <input matInput formControlName="g3" type="number" min="0" step="any" />
         </mat-form-field>
         <mat-form-field appearance="outline" color="accent">
-          <mat-label>Greutatea portiunii superioare a stâlpului marginal G4</mat-label>
+          <mat-label>G4 - Greutatea porțiunii superioare a stâlpului marginal</mat-label>
           <input matInput formControlName="g4" type="number" min="0" step="any" />
         </mat-form-field>
         <mat-form-field appearance="outline" color="accent">
-          <mat-label>Greutatea portiunii inferioare a stâlpului marginal G6</mat-label>
+          <mat-label>G6 - Greutatea porțiunii inferioare a stâlpului marginal</mat-label>
           <input matInput formControlName="g6" type="number" min="0" step="any" />
         </mat-form-field>
         <mat-form-field appearance="outline" color="accent">
-          <mat-label>Excentricitatea sarcinii de la peretele suspendat E7</mat-label>
+          <mat-label>E7 - Excentricitatea sarcinii de la peretele suspendat </mat-label>
           <input matInput formControlName="e7" type="number" min="0" step="any" />
         </mat-form-field>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Sarcina de la vânt: acoperiș W</mat-label>
+            <mat-label>W - Sarcina de la vânt de la acoperiș</mat-label>
             <input matInput formControlName="w" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
@@ -266,7 +266,7 @@
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Sarcina de la podul rulant: NS-min</mat-label>
+            <mat-label>NS-min - Sarcina de la podul rulant</mat-label>
             <input matInput formControlName="n6" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
@@ -280,7 +280,7 @@
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Excentr. sarcinii de acoperiș și decentrarea axelor E1</mat-label>
+            <mat-label>E1 - Excentricitatea sarcinii de acoperiș și decentrarea axelor</mat-label>
             <input matInput formControlName="e1" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex>
@@ -290,7 +290,7 @@
         </div>
         <div fxLayout="row wrap">
           <mat-form-field appearance="outline" color="accent" fxFlex ngClass.gt-xs="form-gap">
-            <mat-label>Excentr. sarcinii podului rulant reazem. sting E5</mat-label>
+            <mat-label>E5 - Excentricitatea sarcinii podului rulant reazemat stâng</mat-label>
             <input matInput formControlName="e5" type="number" min="0" step="any" />
           </mat-form-field>
           <mat-form-field appearance="outline" color="accent" fxFlex>
@@ -299,7 +299,7 @@
           </mat-form-field>
         </div>
         <mat-form-field appearance="outline" color="accent">
-          <mat-label>Coeficientul de conlucrare spatiala a cadrelor K</mat-label>
+          <mat-label>K - Coeficientul de conlucrare spatiala a cadrelor</mat-label>
           <input matInput formControlName="k" type="number" min="0" step="any" />
         </mat-form-field>
       </div>
