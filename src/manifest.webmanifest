@@ -1,8 +1,8 @@
 {
-  "name": "civil-engineering-concrete2",
-  "short_name": "civil-engineering-concrete2",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Construcții din beton armat II",
+  "short_name": "CBA2",
+  "theme_color": "#c2185b",
+  "background_color": "#303030",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
