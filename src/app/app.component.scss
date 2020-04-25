@@ -10,8 +10,10 @@ mat-card {
   margin-bottom: 16px;
 }
 
-mat-form-field.form-gap {
-  margin-right: 16px;
+.form-fields-gap {
+  mat-form-field:not(:first-child) {
+    margin-left: 16px;
+  }
 }
 
 .table-container {
